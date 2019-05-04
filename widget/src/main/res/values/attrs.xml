@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SingleChoiceView">
+        <attr name="sc_choices" format="reference" />
+        <attr name="sc_choice_background" format="reference|color"/>
+        <attr name="sc_choice_selected_text_color" format="reference|color"/>
+        <attr name="sc_choice_default_text_color" format="reference|color"/>
+        <attr name="sc_choice_text_size" format="dimension|reference"/>
+        <attr name="sc_choice_text_font" format="reference|string"/>
+        <attr name="sc_background_stroke_width" format="reference|dimension"/>
+        <attr name="sc_select_position" format="reference|integer"/>
+        <attr name="sc_background_color" format="reference|color"/>
+    </declare-styleable>
+</resources>

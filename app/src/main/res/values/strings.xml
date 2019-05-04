@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SingleChoice</string>
+
+    <string-array name="choices">
+        <item>choice 1</item>
+        <item>choice 2</item>
+        <item>choice 3</item>
+    </string-array>
+</resources>
