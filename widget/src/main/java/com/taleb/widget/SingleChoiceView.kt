@@ -7,6 +7,7 @@ import android.content.Context
 import android.graphics.Color
 import android.graphics.Typeface
 import android.util.AttributeSet
+import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
@@ -25,7 +26,7 @@ class SingleChoiceView :LinearLayout, View.OnClickListener {
     private var strokeWidth = 2
     private var cornerRadius = 4
     private var selectedPosition = 0
-    private var textSize:Float = 14.0f
+    private var textSize:Int = 14
     private var textFont:String? = null
     private var backColor:Int = Color.TRANSPARENT
     var listener: ISingleChoiceView? = null
@@ -52,7 +53,7 @@ class SingleChoiceView :LinearLayout, View.OnClickListener {
         val typedArray = context.obtainStyledAttributes(attributeSet, R.styleable.SingleChoiceView)
         try {
             this.selectedPosition = typedArray.getInt(R.styleable.SingleChoiceView_sc_select_position,0)
-            this.textSize = typedArray.getDimension(R.styleable.SingleChoiceView_sc_choice_text_size,14.0f)
+            this.textSize = typedArray.getDimensionPixelSize(R.styleable.SingleChoiceView_sc_choice_text_size,14)
             this.textFont = typedArray.getString(R.styleable.SingleChoiceView_sc_choice_text_font)
             this.backColor = typedArray.getColor(R.styleable.SingleChoiceView_sc_background_color,Color.TRANSPARENT)
             this.defaultTextColor = typedArray.getColor(R.styleable.SingleChoiceView_sc_choice_default_text_color, Color.BLACK)
@@ -109,7 +110,7 @@ class SingleChoiceView :LinearLayout, View.OnClickListener {
             textView.gravity = Gravity.CENTER
             textView.textAlignment = View.TEXT_ALIGNMENT_CENTER
             textView.setTextColor(this.defaultTextColor)
-            textView.textSize = this.textSize
+            textView.setTextSize(TypedValue.COMPLEX_UNIT_PX,this.textSize.toFloat())
             textView.setPadding(padding,padding,padding,padding)
             textView.setOnClickListener(this)
             if (textFont !== null) {

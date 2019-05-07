@@ -14,7 +14,7 @@
         android:layout_gravity="center|top"
         app:sc_choices="@array/choices"
         app:sc_select_position="1"
-        app:sc_choice_text_size="16sp"
+        app:sc_choice_text_size="14sp"
         app:sc_choice_text_font="fonts/Raleway-Medium.ttf"/>
 
 </FrameLayout>
