@@ -20,7 +20,7 @@ allprojects {
   Step 2. Add the dependency
   ```
   dependencies {
-	        implementation 'com.github.TalebRafiepour:SingleChoice:0.2'
+	        implementation 'com.github.TalebRafiepour:SingleChoice:0.3'
 	}
 ```
 Usage: 
@@ -29,9 +29,12 @@ Usage:
         android:id="@+id/singleChoiceView"
         android:layout_width="match_parent"
         android:layout_margin="20dp"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center|top"
         app:sc_choices="@array/choices"
+        app:sc_stroke_width="1dp"
+        app:sc_choice_padding="10dp"
+        app:sc_corner_radius="5dp"
         app:sc_select_position="1"
         app:sc_choice_text_size="14sp"
         app:sc_choice_text_font="fonts/Raleway-Medium.ttf"/>
