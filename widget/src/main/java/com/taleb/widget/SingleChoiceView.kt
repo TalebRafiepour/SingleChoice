@@ -156,7 +156,7 @@ class SingleChoiceView : LinearLayout, View.OnClickListener {
     }
 
     override fun onClick(p0: View?) {
-        if (p0 == null) {
+        if (p0 == null || !isEnabled) {
             return
         }
         val pos = this.indexOfChild(p0)
@@ -170,7 +170,7 @@ class SingleChoiceView : LinearLayout, View.OnClickListener {
 
     fun selectPosition(selectedPosition: Int) {
         this.selectedPosition = selectedPosition
-        for (i in 0..(choices.size - 1)) {
+        for (i in 0 until choices.size) {
             val txtView = this.getChildAt(i) as TextView
             val backDrwble = DrawableBuilder()
                     .rectangle()
