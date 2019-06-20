@@ -20,7 +20,7 @@ allprojects {
   Step 2. Add the dependency
   ```
   dependencies {
-	        implementation 'com.github.TalebRafiepour:SingleChoice:0.3'
+	        implementation 'com.github.TalebRafiepour:SingleChoice:0.4'
 	}
 ```
 Usage: 
